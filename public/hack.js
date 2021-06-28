@@ -1,7 +1,8 @@
+import chrome from 'ui/chrome';
 const searchbarClass = 'kuiLocalSearchAssistedInput';
 
 const hideSearchBar = async () => {
-  const response = await fetch('/api/v1/auth/authinfo', {
+  const response = await fetch(chrome.addBasePath('/api/v1/auth/authinfo'), {
     method: 'GET',
   });
 
